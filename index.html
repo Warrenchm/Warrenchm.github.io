@@ -1,7 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDG7 Energy Portal</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages. warren</p>
+    <section>
+        <div class="section-title"><h2>SDG 7: Affordable and Clean Energy Quiz</h2></div>
+
+        <form id="quiz-form">
+          <div class="question">
+            <h3>1. What is the main goal of SDG 7?</h3>
+            <div class="options">
+              <label
+                ><input type="radio" name="q1" value="A" /><span
+                  >Promote sustainable cities</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q1" value="B" /><span
+                  >Ensure access to affordable, reliable, sustainable and modern
+                  energy for all</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q1" value="C" /><span
+                  >End hunger and malnutrition</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q1" value="D" /><span
+                  >Protect marine ecosystems</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="question">
+            <h3>2. Which of these is a renewable energy source?</h3>
+            <div class="options">
+              <label
+                ><input type="radio" name="q2" value="A" /><span
+                  >Coal</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q2" value="B" /><span
+                  >Natural gas</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q2" value="C" /><span
+                  >Solar power</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q2" value="D" /><span
+                  >Diesel fuel</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="question">
+            <h3>
+              3. By what year does the UN aim to achieve universal access to
+              electricity?
+            </h3>
+            <div class="options">
+              <label
+                ><input type="radio" name="q3" value="A" /><span
+                  >2025</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q3" value="B" /><span
+                  >2030</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q3" value="C" /><span
+                  >2040</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q3" value="D" /><span
+                  >2050</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="question">
+            <h3>4. Why is clean energy important for development?</h3>
+            <div class="options">
+              <label
+                ><input type="radio" name="q4" value="A" /><span
+                  >It’s more expensive, so it boosts GDP</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q4" value="B" /><span
+                  >It helps reduce air pollution and carbon emissions</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q4" value="C" /><span
+                  >It uses up more natural resources</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q4" value="D" /><span
+                  >It discourages investment in technology</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="question">
+            <h3>
+              5. Which region has the highest rate of people without access to
+              electricity?
+            </h3>
+            <div class="options">
+              <label
+                ><input type="radio" name="q5" value="A" /><span
+                  >North America</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q5" value="B" /><span
+                  >Europe</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q5" value="C" /><span
+                  >Sub-Saharan Africa</span
+                ></label
+              >
+              <label
+                ><input type="radio" name="q5" value="D" /><span
+                  >East Asia</span
+                ></label
+              >
+            </div>
+          </div>
+
+          <button type="submit">Submit Quiz</button>
+        </form>
+
+        <div id="result"></div>
+
+        <script>
+          document
+            .getElementById("quiz-form")
+            .addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              const answers = {
+                q1: "B",
+                q2: "C",
+                q3: "B",
+                q4: "B",
+                q5: "C",
+              };
+
+              let score = 0;
+
+              for (let q in answers) {
+                const selected = document.querySelector(
+                  `input[name="${q}"]:checked`
+                );
+                if (selected && selected.value === answers[q]) {
+                  score++;
+                }
+              }
+
+              const result = document.getElementById("result");
+              result.innerText = `You got ${score} out of 5 correct.`;
+            });
+        </script>
+    </section>
 </body>
 </html>
