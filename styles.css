@@ -65,7 +65,7 @@ button:hover {
 
 .section-title h2 {
   display: inline-block;
-  background-color: #f5f5f5;
+  background-color: white;
   padding: 0 1rem;
   font-size: 2rem;
   color: var(--secondary);
