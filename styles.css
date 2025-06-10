@@ -71,3 +71,15 @@ button:hover {
   font-size: 2rem;
   color: var(--secondary);
 }
+
+:root {
+  --primary: #fcc30b;
+  --secondary: #3f7e44;
+  --dark: #1a1a1a;
+  --light: #f8f9fa;
+  --accent: #26bde2;
+  --danger: #cf3338;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --gray: #6c757d;
+}
