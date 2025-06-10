@@ -15,7 +15,7 @@
 
 .options label {
   background: white;
-  border: 2px solid lightgreen;
+  border: 2px solid white;
   border-radius: 8px;
   padding: 12px 16px;
   cursor: pointer;
@@ -27,7 +27,7 @@
 }
 
 .options input[type="radio"] {
-  accent-color: green;
+  accent-color: white;
   transform: scale(1.2);
 }
 
@@ -52,7 +52,7 @@ button {
 }
 
 button:hover {
-  background-color: green;
+  background-color: white;
 }
 
 #result {
