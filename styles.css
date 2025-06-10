@@ -32,7 +32,6 @@
 }
 
 .options input[type="radio"]:checked + span {
-  display:none;
   font-weight: bold;
 }
 
