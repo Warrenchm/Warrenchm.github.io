@@ -14,8 +14,8 @@
 }
 
 .options label {
-  background: lightgreen;
-  border: 2px solid green;
+  background: white;
+  border: 2px solid lightgreen;
   border-radius: 8px;
   padding: 12px 16px;
   cursor: pointer;
@@ -38,7 +38,7 @@
 
 .options label:hover {
   border-color: greenyellow;
-  background: #e6f2ff;
+  background: lightgreen;
 }
 
 button {
